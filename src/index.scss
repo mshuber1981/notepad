@@ -1,18 +1,17 @@
+:root {
+  --amplify-primary-color: #007bff;
+  --amplify-primary-tint: #28a745;
+  --amplify-primary-shade: #28a745;
+}
+
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* Sign In
+/* Home
 ************************************************************** */
-.signin {
-  background: url(./images/notes.jpg) repeat center;
+.home {
+  background: url(./images/notepads.png) repeat center;
   -webkit-background-size: repeat;
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
-}
-.amplify-authenticator {
-  .amplify-toast {
-    .toast {
-      background-color: green;
-    }
-  }
 }

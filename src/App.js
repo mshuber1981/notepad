@@ -4,7 +4,7 @@ import Routes from "./components/Routes";
 const App = () => {
   return (
     <main>
-      <Routes />;
+      <Routes />
     </main>
   );
 };

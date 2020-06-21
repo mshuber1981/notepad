@@ -12,11 +12,9 @@ import * as serviceWorker from "./serviceWorker";
 Amplify.configure(aws_exports);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById("root")
 );
 

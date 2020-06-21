@@ -16,7 +16,7 @@ const NavBar = () => {
       {/* The Navbar.Brand link WILL refresh the page */}
       <Navbar.Brand href={process.env.PUBLIC_URL + "/"}>Notepad 🗒</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse>
+      <Navbar.Collapse className="justify-content-end">
         <Nav>
           {/* LinkContainer (react-router-bootstrap) links below WILL NOT refresh the page */}
           <LinkContainer exact to="/">
