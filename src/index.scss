@@ -1,0 +1,18 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+/* Sign In
+************************************************************** */
+.signin {
+  background: url(./images/notes.jpg) repeat center;
+  -webkit-background-size: repeat;
+  -moz-background-size: repeat;
+  -o-background-size: repeat;
+  background-size: repeat;
+}
+.amplify-authenticator {
+  .amplify-toast {
+    .toast {
+      background-color: green;
+    }
+  }
+}
