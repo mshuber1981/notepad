@@ -1,4 +1,5 @@
 import React from "react";
+import UserNotes from "./UserNotes";
 import NavBar from "../components/NavBar";
 import {
   AmplifyAuthenticator,
@@ -21,9 +22,7 @@ const Notes = () => {
   return authState === AuthState.SignedIn && user ? (
     <section>
       <AmplifyGreetings username={user.username}></AmplifyGreetings>
-      <h1 className="d-flex flex-column justify-content-center align-items-center text-center">
-        App
-      </h1>
+      <UserNotes />
     </section>
   ) : (
     <section>
