@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Form,
-  FormControl,
-  InputGroup,
-} from "react-bootstrap";
+// https://react-bootstrap.github.io/
+import { Button, Form, FormControl, InputGroup } from "react-bootstrap";
+// https://aws-amplify.github.io/amplify-js/api/
 import { API, graphqlOperation } from "aws-amplify";
 import { createNote } from "../graphql/mutations";
 
 class UserNotes extends Component {
   state = {
+    // Text area before submission
     note: "",
+    // Submitted notes
     notes: [],
   };
 
+  // Handle changes in the text area for new notes
   handleChangeNote = (event) => this.setState({ note: event.target.value });
+  // Handle adding new notes
   handleAddNote = async (event) => {
     const { note, notes } = this.state;
     event.preventDefault();
@@ -23,6 +23,7 @@ class UserNotes extends Component {
     const result = await API.graphql(graphqlOperation(createNote, { input }));
     const newNote = result.data.createNote;
     const updatedNotes = [newNote, ...notes];
+    // Render new notes and clear text area
     this.setState({ notes: updatedNotes, note: "" });
   };
 
@@ -33,7 +34,7 @@ class UserNotes extends Component {
       <div>
         <div className="d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
           <h1>Notepad 🗒</h1>
-          <Container>
+          <div className="container">
             <Form onSubmit={this.handleAddNote}>
               <InputGroup>
                 <FormControl
@@ -50,9 +51,9 @@ class UserNotes extends Component {
                 </InputGroup.Append>
               </InputGroup>
             </Form>
-          </Container>
+          </div>
         </div>
-        <Container>
+        <div className="container">
           {notes.map((item) => (
             <div key={item.id} className="d-flex mt-4">
               <li className="list-group-item mr-4">{item.note}</li>
@@ -61,7 +62,7 @@ class UserNotes extends Component {
               </button>
             </div>
           ))}
-        </Container>
+        </div>
       </div>
     );
   }

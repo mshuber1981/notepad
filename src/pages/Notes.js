@@ -1,12 +1,16 @@
 import React from "react";
-import UserNotes from "./UserNotes";
-import NavBar from "../components/NavBar";
+// https://react-bootstrap.github.io/components/buttons/
+import { Button } from "react-bootstrap";
+// https://www.npmjs.com/package/react-router-bootstrap
+import { Link } from "react-router-dom";
+// https://docs.amplify.aws/start/getting-started/auth/q/integration/react
 import {
   AmplifyAuthenticator,
   AmplifyGreetings,
   AmplifySignUp,
 } from "@aws-amplify/ui-react";
 import { AuthState, onAuthUIStateChange } from "@aws-amplify/ui-components";
+import UserNotes from "./UserNotes";
 
 const Notes = () => {
   const [authState, setAuthState] = React.useState();
@@ -25,9 +29,12 @@ const Notes = () => {
       <UserNotes />
     </section>
   ) : (
-    <section>
-      <NavBar />
-      <AmplifyAuthenticator className="d-flex flex-column vh-100 justify-content-center align-items-center">
+    <section className="d-flex flex-column vh-100 justify-content-center align-items-center">
+      <Link exact to="/">
+        <Button>Home 🗒</Button>
+      </Link>
+      <br></br>
+      <AmplifyAuthenticator>
         <AmplifySignUp
           slot="sign-up"
           formFields={[

@@ -1,9 +1,13 @@
+// https://docs.amplify.aws/ui/customization/theming/q/framework/react
 :root {
   --amplify-primary-color: #007bff;
+  // Link hover
   --amplify-primary-tint: #28a745;
+  // Sign in click
   --amplify-primary-shade: #28a745;
 }
 
+// https://create-react-app.dev/docs/adding-bootstrap/
 @import "~bootstrap/scss/bootstrap.scss";
 
 /* Home
