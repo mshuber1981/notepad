@@ -29,7 +29,7 @@ const Notes = () => {
       <UserNotes />
     </>
   ) : (
-    <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
+    <div className="d-flex flex-column vh-100 justify-content-center align-items-center home">
       <Link exact to="/">
         <Button>Home 🗒</Button>
       </Link>
