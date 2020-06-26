@@ -24,12 +24,12 @@ const Notes = () => {
   }, []);
 
   return authState === AuthState.SignedIn && user ? (
-    <section>
+    <>
       <AmplifyGreetings username={user.username}></AmplifyGreetings>
       <UserNotes />
-    </section>
+    </>
   ) : (
-    <section className="d-flex flex-column vh-100 justify-content-center align-items-center">
+    <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
       <Link exact to="/">
         <Button>Home 🗒</Button>
       </Link>
@@ -59,7 +59,7 @@ const Notes = () => {
           ]}
         />
       </AmplifyAuthenticator>
-    </section>
+    </div>
   );
 };
 

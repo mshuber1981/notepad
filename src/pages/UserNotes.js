@@ -4,6 +4,7 @@ import { Button, Form, FormControl, InputGroup } from "react-bootstrap";
 // https://aws-amplify.github.io/amplify-js/api/
 import { API, graphqlOperation } from "aws-amplify";
 import { createNote } from "../graphql/mutations";
+import { listNotes } from "../graphql/queries";
 
 class UserNotes extends Component {
   state = {
@@ -13,8 +14,15 @@ class UserNotes extends Component {
     notes: [],
   };
 
+  // Update submitted notes when component mounts
+  async componentDidMount() {
+    const result = await API.graphql(graphqlOperation(listNotes));
+    this.setState({ notes: result.data.listNotes.items });
+  }
+
   // Handle changes in the text area for new notes
   handleChangeNote = (event) => this.setState({ note: event.target.value });
+
   // Handle adding new notes
   handleAddNote = async (event) => {
     const { note, notes } = this.state;
@@ -31,7 +39,7 @@ class UserNotes extends Component {
     const { note, notes } = this.state;
 
     return (
-      <div>
+      <>
         <div className="d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
           <h1>Notepad 🗒</h1>
           <div className="container">
@@ -63,7 +71,7 @@ class UserNotes extends Component {
             </div>
           ))}
         </div>
-      </div>
+      </>
     );
   }
 }
