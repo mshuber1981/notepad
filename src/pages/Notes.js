@@ -30,7 +30,7 @@ const Notes = () => {
     </>
   ) : (
     <div className="d-flex flex-column vh-100 justify-content-center align-items-center home">
-      <Link exact to="/">
+      <Link exact="true" to="/">
         <Button>Home 🗒</Button>
       </Link>
       <br></br>
