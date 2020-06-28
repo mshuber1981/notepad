@@ -19,7 +19,7 @@ const NavBar = () => {
       <Navbar.Collapse className="justify-content-end">
         <Nav>
           {/* LinkContainer (react-router-bootstrap) links below WILL NOT refresh the page */}
-          <LinkContainer exact to="/Notes">
+          <LinkContainer exact to="/Notes/">
             <Nav.Link>Sign in</Nav.Link>
           </LinkContainer>
         </Nav>

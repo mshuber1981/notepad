@@ -28,14 +28,14 @@
 
 /* Media queries
 ************************************************************** */
-@media (max-height: 320px) {
+@media (max-height: 414px) {
   .card {
     h1 {
       font-size: x-large;
     }
-    height: 12rem;
+    height: $height;
   }
   .auth {
-    height: 12rem;
+    height: $height;
   }
 }
