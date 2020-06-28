@@ -1,11 +1,12 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import Card from "react-bootstrap/Card";
+// https://react-bootstrap.github.io/components/cards/
+import { Card } from "react-bootstrap";
 import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <section className="home overflow-auto">
+    <section className="home">
       <NavBar />
       <article className="d-flex flex-column vh-100 align-items-center justify-content-center text-center">
         <Card bg="light" text="dark" border="primary">

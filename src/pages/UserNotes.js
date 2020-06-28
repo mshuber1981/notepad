@@ -161,7 +161,7 @@ const UserNotes = (props) => {
           <div key={item.id} className="d-flex justify-content-center py-2">
             {/* Inline arrow functions (https://reactjs.org/docs/faq-functions.html) prevent function from running on page load (handleSetNote and handleDeleteNote) */}
             <li
-              className="list-group-item mx-4 overflow-auto"
+              className="list-group-item mx-4"
               onClick={() => handleSetNote(item)}
             >
               {item.note}

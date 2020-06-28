@@ -20,10 +20,17 @@
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
+  overflow-y: auto;
 }
 .card {
   max-width: 25rem;
   max-height: 20rem;
+}
+
+/* Notes
+************************************************************** */
+.list-group-item {
+  overflow-x: auto;
 }
 
 /* Media queries

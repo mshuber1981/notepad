@@ -24,13 +24,13 @@ const Notes = () => {
   }, []);
 
   return authState === AuthState.SignedIn && user ? (
-    <div className="notes vh-100 overflow-auto">
+    <div className="notes vh-100">
       <AmplifyGreetings username={user.username}></AmplifyGreetings>
       {/* Passing username prop to UserNotes */}
       <UserNotes username={user.username} />
     </div>
   ) : (
-    <div className="home d-flex flex-column vh-100 justify-content-center align-items-center overflow-auto">
+    <div className="home d-flex flex-column vh-100 justify-content-center align-items-center">
       <Link exact="true" to="/">
         <Button>Home 🗒</Button>
       </Link>
@@ -43,7 +43,7 @@ const Notes = () => {
               {
                 type: "username",
                 label: "Username",
-                placeholder: "",
+                placeholder: "Case sensitive",
                 required: true,
               },
               {

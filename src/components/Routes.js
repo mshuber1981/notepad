@@ -3,6 +3,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import Notes from "../pages/Notes";
+import NotFound from "../pages/NotFound";
 
 const Routes = () => {
   return (
@@ -10,8 +11,11 @@ const Routes = () => {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route exact path="/Notes/">
+      <Route exact path="/Notes">
         <Notes />
+      </Route>
+      <Route>
+        <NotFound />
       </Route>
     </Switch>
   );
