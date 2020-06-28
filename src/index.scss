@@ -13,10 +13,29 @@
 
 /* Home
 ************************************************************** */
-.home {
+.home,
+.notes {
   background: url(./images/notepads.png) repeat center;
   -webkit-background-size: repeat;
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
+}
+.card {
+  max-width: 25rem;
+  max-height: 20rem;
+}
+
+/* Media queries
+************************************************************** */
+@media (max-height: 320px) {
+  .card {
+    h1 {
+      font-size: x-large;
+    }
+    height: 12rem;
+  }
+  .auth {
+    height: 12rem;
+  }
 }

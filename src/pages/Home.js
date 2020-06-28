@@ -5,15 +5,10 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <section className="home">
+    <section className="home overflow-auto">
       <NavBar />
       <article className="d-flex flex-column vh-100 align-items-center justify-content-center text-center">
-        <Card
-          bg="light"
-          text="dark"
-          border="primary"
-          style={{ width: "25rem", height: "20rem" }}
-        >
+        <Card bg="light" text="dark" border="primary">
           <Card.Header as="h1">Welcome!</Card.Header>
           <Card.Body className="d-flex flex-column align-items-center justify-content-center">
             <Card.Text className="text-left">

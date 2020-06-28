@@ -24,41 +24,44 @@ const Notes = () => {
   }, []);
 
   return authState === AuthState.SignedIn && user ? (
-    <>
+    <div className="notes vh-100 overflow-auto">
       <AmplifyGreetings username={user.username}></AmplifyGreetings>
-      <UserNotes />
-    </>
+      {/* Passing username prop to UserNotes */}
+      <UserNotes username={user.username} />
+    </div>
   ) : (
-    <div className="d-flex flex-column vh-100 justify-content-center align-items-center home">
+    <div className="home d-flex flex-column vh-100 justify-content-center align-items-center overflow-auto">
       <Link exact="true" to="/">
         <Button>Home 🗒</Button>
       </Link>
       <br></br>
-      <AmplifyAuthenticator>
-        <AmplifySignUp
-          slot="sign-up"
-          formFields={[
-            {
-              type: "username",
-              label: "Username",
-              placeholder: "",
-              required: true,
-            },
-            {
-              type: "email",
-              label: "Email",
-              placeholder: "someone@example.com",
-              required: true,
-            },
-            {
-              type: "password",
-              label: "Password",
-              placeholder: "",
-              required: true,
-            },
-          ]}
-        />
-      </AmplifyAuthenticator>
+      <div className="auth">
+        <AmplifyAuthenticator>
+          <AmplifySignUp
+            slot="sign-up"
+            formFields={[
+              {
+                type: "username",
+                label: "Username",
+                placeholder: "",
+                required: true,
+              },
+              {
+                type: "email",
+                label: "Email",
+                placeholder: "someone@example.com",
+                required: true,
+              },
+              {
+                type: "password",
+                label: "Password",
+                placeholder: "",
+                required: true,
+              },
+            ]}
+          />
+        </AmplifyAuthenticator>
+      </div>
     </div>
   );
 };
