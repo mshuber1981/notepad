@@ -134,7 +134,7 @@ const UserNotes = (props) => {
 
   return (
     <>
-      <div className="d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
+      <div className="usernotes-header d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
         <h1>Notepad 🗒</h1>
         <div className="container">
           <Form onSubmit={handleAddNote}>
@@ -156,7 +156,7 @@ const UserNotes = (props) => {
           </Form>
         </div>
       </div>
-      <div className="container bg-light vh-100">
+      <div className="usernotes-body container bg-light">
         {notes.map((item) => (
           <div key={item.id} className="d-flex justify-content-center py-2">
             {/* Inline arrow functions (https://reactjs.org/docs/faq-functions.html) prevent function from running on page load (handleSetNote and handleDeleteNote) */}

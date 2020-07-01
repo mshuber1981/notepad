@@ -29,6 +29,12 @@
 
 /* Notes
 ************************************************************** */
+.usernotes-header {
+  height: 15vh;
+}
+.usernotes-body {
+  height: 80vh;
+}
 .list-group-item {
   overflow-x: auto;
 }
@@ -37,10 +43,11 @@
 ************************************************************** */
 @media (max-height: 414px) {
   .card {
+    height: $height;
+    margin-bottom: 0.5rem;
     h1 {
       font-size: x-large;
     }
-    height: $height;
   }
   .auth {
     height: $height;

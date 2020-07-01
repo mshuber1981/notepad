@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <section className="home">
+    <section className="home container-fluid">
       <NavBar />
       <article className="d-flex flex-column vh-100 align-items-center justify-content-center text-center">
         <Card bg="light" text="dark" border="primary">
