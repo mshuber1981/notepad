@@ -17,11 +17,21 @@ const Notes = () => {
   const [user, setUser] = React.useState();
 
   React.useEffect(() => {
+    zoomOut();
     return onAuthUIStateChange((nextAuthState, authData) => {
       setAuthState(nextAuthState);
       setUser(authData);
     });
   }, []);
+
+  const zoomOut = () => {
+    const viewport = document.querySelector('meta[name="viewport"]');
+
+    if (viewport) {
+      viewport.content = "initial-scale=0.1";
+      viewport.content = "width=device-width";
+    }
+  };
 
   return authState === AuthState.SignedIn && user ? (
     <section className="notes container-fluid vh-100">
