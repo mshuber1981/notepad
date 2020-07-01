@@ -13,14 +13,21 @@
 
 /* Home
 ************************************************************** */
-.home,
+.home {
+  background: url(./images/notepads.png) repeat center;
+  -webkit-background-size: repeat;
+  -moz-background-size: repeat;
+  -o-background-size: repeat;
+  background-size: repeat;
+  overflow: hidden;
+}
 .notes {
   background: url(./images/notepads.png) repeat center;
   -webkit-background-size: repeat;
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
-  overflow-y: auto;
+  overflow: auto;
 }
 .card {
   max-width: 25rem;

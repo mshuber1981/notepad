@@ -32,7 +32,7 @@ const Notes = () => {
     </div>
   ) : (
     <div className="notes container-fluid">
-      <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
+      <div className="d-flex flex-column vh-100 justify-content-center align-items-center overflow-auto">
         <Link exact="true" to="/">
           <Button>Home 🗒</Button>
         </Link>
