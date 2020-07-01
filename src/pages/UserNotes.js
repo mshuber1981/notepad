@@ -1,6 +1,8 @@
 import React from "react";
 // https://react-bootstrap.github.io/
 import { Button, Form, FormControl, InputGroup } from "react-bootstrap";
+// https://docs.amplify.aws/start/getting-started/auth/q/integration/react
+import { AmplifyGreetings } from "@aws-amplify/ui-react";
 // https://aws-amplify.github.io/amplify-js/api/
 import { API, graphqlOperation } from "aws-amplify";
 import { createNote, deleteNote, updateNote } from "../graphql/mutations";
@@ -134,6 +136,7 @@ const UserNotes = (props) => {
 
   return (
     <>
+      <AmplifyGreetings username={props.username}></AmplifyGreetings>
       <div className="d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
         <h1>Notepad 🗒</h1>
         <div className="container">

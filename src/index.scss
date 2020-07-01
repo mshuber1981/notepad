@@ -27,7 +27,7 @@
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
-  overflow: auto;
+  overflow-y: auto;
 }
 .card {
   max-width: 25rem;
@@ -37,7 +37,7 @@
 /* Notes
 ************************************************************** */
 .usernotes-body {
-  min-height: 50vh;
+  min-height: 33vh;
 }
 .list-group-item {
   overflow-x: auto;

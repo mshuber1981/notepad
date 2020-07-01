@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 // https://react-bootstrap.github.io/components/cards/
 import { Card } from "react-bootstrap";
+import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 const Home = () => {

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 // https://docs.amplify.aws/start/getting-started/auth/q/integration/react
 import {
   AmplifyAuthenticator,
-  AmplifyGreetings,
   AmplifySignIn,
   AmplifySignUp,
 } from "@aws-amplify/ui-react";
@@ -25,65 +24,62 @@ const Notes = () => {
   }, []);
 
   return authState === AuthState.SignedIn && user ? (
-    <div className="notes container-fluid vh-100">
-      <AmplifyGreetings username={user.username}></AmplifyGreetings>
+    <section className="notes container-fluid vh-100">
       {/* Passing username prop to UserNotes */}
       <UserNotes username={user.username} />
-    </div>
+    </section>
   ) : (
-    <div className="notes container-fluid">
-      <div className="d-flex flex-column vh-100 justify-content-center align-items-center overflow-auto">
-        <Link exact="true" to="/">
-          <Button>Home 🗒</Button>
-        </Link>
-        <br></br>
-        <div className="auth">
-          {/* https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#sign-in */}
-          <AmplifyAuthenticator>
-            <AmplifySignIn
-              slot="sign-in"
-              formFields={[
-                {
-                  type: "username",
-                  label: "Username",
-                  placeholder: "Case sensitive!",
-                  required: true,
-                },
-                {
-                  type: "password",
-                  label: "Password",
-                  placeholder: "",
-                  required: true,
-                },
-              ]}
-            ></AmplifySignIn>
-            <AmplifySignUp
-              slot="sign-up"
-              formFields={[
-                {
-                  type: "username",
-                  label: "Username",
-                  placeholder: "Case sensitive!",
-                  required: true,
-                },
-                {
-                  type: "email",
-                  label: "Email",
-                  placeholder: "someone@example.com",
-                  required: true,
-                },
-                {
-                  type: "password",
-                  label: "Password",
-                  placeholder: "8 characters (A-Z, a-z, 0-9)",
-                  required: true,
-                },
-              ]}
-            />
-          </AmplifyAuthenticator>
-        </div>
+    <section className="notes d-flex flex-column vh-100 justify-content-center align-items-center">
+      <Link exact="true" to="/">
+        <Button>Home 🗒</Button>
+      </Link>
+      <br></br>
+      <div className="auth">
+        {/* https://docs.amplify.aws/ui/auth/authenticator/q/framework/react#sign-in */}
+        <AmplifyAuthenticator>
+          <AmplifySignIn
+            slot="sign-in"
+            formFields={[
+              {
+                type: "username",
+                label: "Username",
+                placeholder: "Case sensitive!",
+                required: true,
+              },
+              {
+                type: "password",
+                label: "Password",
+                placeholder: "",
+                required: true,
+              },
+            ]}
+          ></AmplifySignIn>
+          <AmplifySignUp
+            slot="sign-up"
+            formFields={[
+              {
+                type: "username",
+                label: "Username",
+                placeholder: "Case sensitive!",
+                required: true,
+              },
+              {
+                type: "email",
+                label: "Email",
+                placeholder: "someone@example.com",
+                required: true,
+              },
+              {
+                type: "password",
+                label: "Password",
+                placeholder: "8 characters (A-Z, a-z, 0-9)",
+                required: true,
+              },
+            ]}
+          />
+        </AmplifyAuthenticator>
       </div>
-    </div>
+    </section>
   );
 };
 
