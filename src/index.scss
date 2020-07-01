@@ -1,3 +1,7 @@
+// https://create-react-app.dev/docs/adding-bootstrap/
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./scss/variables.scss";
+
 // https://docs.amplify.aws/ui/customization/theming/q/framework/react
 :root {
   --amplify-primary-color: #007bff;
@@ -6,10 +10,6 @@
   // Sign in click
   --amplify-primary-shade: #28a745;
 }
-
-// https://create-react-app.dev/docs/adding-bootstrap/
-@import "~bootstrap/scss/bootstrap.scss";
-@import "./scss/variables.scss";
 
 /* Home
 ************************************************************** */
