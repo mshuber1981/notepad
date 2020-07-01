@@ -23,6 +23,7 @@ const UserNotes = (props) => {
 
   // Add Listeners for creating, deleting, and updating notes when the component mounts
   React.useEffect(() => {
+    zoomOut();
     getNotes();
     const createNoteListener = API.graphql(
       graphqlOperation(onCreateNote, { owner: props.username })
@@ -86,6 +87,16 @@ const UserNotes = (props) => {
     };
     // Empty array ensures useEffect will only run when component mounts
   }, [props.username]);
+
+  // Reset zoom
+  const zoomOut = () => {
+    const viewport = document.querySelector('meta[name="viewport"]');
+
+    if (viewport) {
+      viewport.content = "initial-scale=1";
+      viewport.content = "width=device-width";
+    }
+  };
 
   // Get the current list of notes
   const getNotes = async () => {
