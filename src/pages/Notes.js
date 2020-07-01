@@ -25,7 +25,7 @@ const Notes = () => {
   }, []);
 
   return authState === AuthState.SignedIn && user ? (
-    <div className="notes container-fluid">
+    <div className="notes container-fluid vh-100">
       <AmplifyGreetings username={user.username}></AmplifyGreetings>
       {/* Passing username prop to UserNotes */}
       <UserNotes username={user.username} />

@@ -29,11 +29,8 @@
 
 /* Notes
 ************************************************************** */
-.usernotes-header {
-  height: 15vh;
-}
 .usernotes-body {
-  height: 80vh;
+  min-height: 50vh;
 }
 .list-group-item {
   overflow-x: auto;

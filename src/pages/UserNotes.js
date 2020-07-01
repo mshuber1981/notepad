@@ -134,7 +134,7 @@ const UserNotes = (props) => {
 
   return (
     <>
-      <div className="usernotes-header d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
+      <div className="d-flex flex-column justify-content-center align-items-center text-center text-white bg-primary py-4">
         <h1>Notepad 🗒</h1>
         <div className="container">
           <Form onSubmit={handleAddNote}>
