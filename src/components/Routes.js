@@ -7,6 +7,8 @@ import NotFound from "../pages/NotFound";
 
 const Routes = () => {
   return (
+    // https://docs.aws.amazon.com/amplify/latest/userguide/redirects.html#simple-redirects-and-rewrites
+    // Required for routes to work correctly (Redirects for Single Page Web Apps)
     <Switch>
       <Route exact path="/">
         <Home />
