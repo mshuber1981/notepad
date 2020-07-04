@@ -19,5 +19,29 @@
                 }
             }
         }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-notepad-dev-80552-authRole",
+            "UnauthRoleArn": "arn:aws:iam::566427100098:role/amplify-notepad-dev-80552-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::566427100098:role/amplify-notepad-dev-80552-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-notepad-dev-80552-deployment",
+            "UnauthRoleName": "amplify-notepad-dev-80552-unauthRole",
+            "StackName": "amplify-notepad-dev-80552",
+            "StackId": "arn:aws:cloudformation:us-east-2:566427100098:stack/amplify-notepad-dev-80552/17a45980-bdf7-11ea-9d74-0a18862e0c0c",
+            "AmplifyAppId": "d1vvgwhd3gqghg"
+        },
+        "categories": {
+            "auth": {
+                "notepadf3205397": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1vvgwhd3gqghg",
+                    "type": "cicd"
+                }
+            }
+        }
     }
 }
