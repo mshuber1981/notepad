@@ -1,9 +1,7 @@
 # Notepad 🗒
 
-## Description
+My CRUDdy note taking app, built with React and powered by AWS Amplify.
 
-My CRUDdy note taking app... a work in progress.
-
-![Notepad](notepad.png?raw=true "Notepad")
+![Notepad](notepad.jpg?raw=true "Notepad")
 
 ### <a href="https://notepad.mikeyneedsajob.com/">LIVE DEMO</a>
